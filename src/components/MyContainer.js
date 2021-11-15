@@ -1,4 +1,4 @@
-import MyList from '/MyList.js';
+import MyList from './MyList';
 
 function List() {
     return(
