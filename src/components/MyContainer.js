@@ -1,6 +1,6 @@
 import MyList from '/MyList.js';
 
-function MyList() {
+function List() {
     return(
         <div>
             <MyList />
@@ -8,4 +8,4 @@ function MyList() {
     );
 }
 
-export default MyList;
+export default List;
