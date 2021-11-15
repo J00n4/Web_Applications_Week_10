@@ -1,6 +1,6 @@
 import MyList from './MyList';
 
-function List() {
+const List = () => {
     return(
         <div>
             <MyList />
