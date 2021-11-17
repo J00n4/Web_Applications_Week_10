@@ -14,7 +14,8 @@ ReactDOM.render(
 
 
 function MyList(info) {
-    console.log(info);
+    console.log("This is 'info' from MyList:" + info.item);
+    console.log(info.item);
     /*const header = "Really epic list component";
 
     const items = [
@@ -24,7 +25,7 @@ function MyList(info) {
     return(
         <ol>
             {info.item.map((item) => (
-                <li>{item.text}</li>
+                <li key={item.id}>{item.text}</li>
             ))}
         </ol>
         //<p>{item}</p>
