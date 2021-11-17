@@ -13,8 +13,8 @@ ReactDOM.render(
 );*/
 
 
-function MyList({item}) {
-    console.log({item});
+function MyList(info) {
+    console.log(info);
     /*const header = "Really epic list component";
 
     const items = [
@@ -22,7 +22,12 @@ function MyList({item}) {
         { id: "2", text: "Also this" }
     ];*/
     return(
-        <p>{item}</p>
+        <ol>
+            {info.item.map((item) => (
+                <li>{item.text}</li>
+            ))}
+        </ol>
+        //<p>{item}</p>
         /*<div>
             <h1>{header}</h1>
             <ol>
