@@ -22,32 +22,34 @@ function MyList(info) {
         { id: "1", text: "This is an item" },
         { id: "2", text: "Also this" }
     ];*/
-    return(
-        <ol>
-            {info.item.map((item) => (
-                <li key={item.id}>{item.text}</li>
-            ))}
-        </ol>
-        //<p>{item}</p>
-        /*<div>
-            <h1>{header}</h1>
+    if(info.item) {
+        return(
             <ol>
-                <li>
-                    {items.text}
-                </li>
+                {info.item.map((item) => (
+                    <li key={item.id}>{item.text}</li>
+                ))}
             </ol>
-        </div>*/
-/*        <div>
-            <h1>{header.text}</h1>
-            <ol>
-                <li>
-                    {items.map((items) => (
-                        <MyList key={items.id} item={items.text} />
-                    ))}
-                </li>
-            </ol>
-        </div>
-*/    );
+            //<p>{item}</p>
+            /*<div>
+                <h1>{header}</h1>
+                <ol>
+                    <li>
+                        {items.text}
+                    </li>
+                </ol>
+            </div>*/
+    /*        <div>
+                <h1>{header.text}</h1>
+                <ol>
+                    <li>
+                        {items.map((items) => (
+                            <MyList key={items.id} item={items.text} />
+                        ))}
+                    </li>
+                </ol>
+            </div>
+    */    );
+                        }
 }
 
 export default MyList;
