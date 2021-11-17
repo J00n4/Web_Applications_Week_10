@@ -9,6 +9,7 @@ function App() {
       {id: "1", text: "This is an item"},
       {id: "2", text: "Also this"}
   ]);
+
   return (
     <div className="App">
       <h1>Hello World!</h1>
@@ -16,13 +17,5 @@ function App() {
     </div>
   );
 }
-
-/*function MyContainer() {
-  return(
-    <div>
-
-    </div>
-  );
-}*/
 
 export default App;
