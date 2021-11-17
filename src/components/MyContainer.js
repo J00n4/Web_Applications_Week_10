@@ -1,12 +1,12 @@
 import MyList from './MyList';
 
-const List = ({items}) => {
-    const header = "Really epic list component";
+const List = (params) => {
+    //const header = "Really epic list component";
     return(
         <div>
-            <h1>{header}</h1>
+            <h1>{params.header}</h1>
             <ol>
-                {items.map((item) => (
+                {params.items.map((item) => (
                     <li><MyList key={item.id} item={item.text} /></li>
                 ))}
             </ol>
