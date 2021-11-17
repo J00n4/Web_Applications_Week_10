@@ -1,7 +1,7 @@
 import MyList from './MyList';
 import {useState} from "react";
 
-const List = (params) => {
+function List(params) {
     console.log("This is from MyContainer:" + params.items);
     console.log(params.items);
     const [header, setHeader] = useState("Really epic list component");
