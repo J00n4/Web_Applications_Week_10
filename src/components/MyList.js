@@ -1,8 +1,8 @@
 function MyList(info) {
-    console.log("This is 'info' from MyList:" + info.item);
-    console.log(info.item);
+    console.log("This is 'info' from MyList:" + info.items);
+    console.log(info.items);
     console.log(info);
-    const information = info.item;
+    const information = info.items;
     return(
         <div>
             <h1>{info.header}</h1>

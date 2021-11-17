@@ -9,7 +9,7 @@ function List() {
         {id: "2", text: "Also this"}
     ]);
     return(
-        <MyList header={header} item={items} />
+        <MyList header={header} items={items} />
     )
 }
 
