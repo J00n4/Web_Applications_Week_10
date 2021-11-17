@@ -22,9 +22,7 @@ function MyList({item}) {
         { id: "2", text: "Also this" }
     ];*/
     return(
-        <div>
-            <p>{item}</p>
-        </div>
+        <p>{item}</p>
         /*<div>
             <h1>{header}</h1>
             <ol>
