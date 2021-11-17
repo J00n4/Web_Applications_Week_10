@@ -8,7 +8,7 @@ function MyList(info) {
             <h1>{info.header}</h1>
             <ol>
                 {information.map((item) => (
-                    <li key={item.id}>{item.text}</li>
+                    <li id={item.id} onClick={() => info.updateItem(item.id)}>{item.text}</li>
                 ))}
             </ol>
         </div>
