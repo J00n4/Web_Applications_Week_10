@@ -4,11 +4,14 @@ function MyList(info) {
     console.log(info);
     const information = info.item;
     return(
-        <ol>
-            {information.map((item) => (
-                <li key={item.id}>{item.text}</li>
-            ))}
-        </ol>
+        <div>
+            <h1>{info.header}</h1>
+            <ol>
+                {information.map((item) => (
+                    <li key={item.id}>{item.text}</li>
+                ))}
+            </ol>
+        </div>
     );
 }
 
