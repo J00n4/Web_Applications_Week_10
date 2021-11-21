@@ -17,12 +17,6 @@ function Header() {
         i18n.changeLanguage(lang);
     }
 
-    const Component = ({ name }) => {
-        return <div> Hello {name}!</div>;
-    };
-
-    const wrappedWithName = MyHOC(Component, { name: "Kalle" });
-
     return(
         <div>
             <Appbar position="static">
