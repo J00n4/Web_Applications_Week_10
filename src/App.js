@@ -2,6 +2,7 @@ import './App.css';
 import MyContainer from "./components/MyContainer";
 import About from "./components/About";
 import Header from "./components/Header";
+import Menu from "./components/Menu";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {

@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 function About() {
     const [dataType, setDataType] = useState("post")
-    const [data, setData] = useState([""])
+    const [data, setData] = useState("")
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
