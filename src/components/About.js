@@ -8,6 +8,27 @@ function About() {
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
         .then(json => setParsedData(json))
+
+        const setParsedData = (parseData) => {
+            console.log("This is here");
+            console.log(parseData);
+            //const test = parseData[1].title;
+            //console.log(parseData.length);
+            var i;
+            var dataArray = [];
+            for(i=0; i<parseData.length; i++) {
+                const modifiedData = { key: parseData[i].id, title: parseData[i].title };
+                console.log(modifiedData);
+                dataArray.push(modifiedData.title);
+            }
+            uploadData(dataArray);
+        }
+
+        const uploadData = (modifiedData) => {
+            setData(JSON.stringify(modifiedData));
+        }
+
+
         /*let mounted = true;
         async function uploadData() {
             const fetchData = await fetch('https://jsonplaceholder.typicode.com/posts');
@@ -29,25 +50,6 @@ function About() {
             mounted = false;
         };*/
     }, []);
-
-    const setParsedData = (parseData) => {
-        console.log("This is here");
-        console.log(parseData);
-        //const test = parseData[1].title;
-        //console.log(parseData.length);
-        var i;
-        var dataArray = [];
-        for(i=0; i<parseData.length; i++) {
-            const modifiedData = { key: parseData[i].id, title: parseData[i].title };
-            console.log(modifiedData);
-            dataArray.push(modifiedData);
-        }
-        uploadData(dataArray);
-    }
-
-    const uploadData = (modifiedData) => {
-        setData(JSON.stringify(modifiedData));
-    }
 
     return(
         <div>
