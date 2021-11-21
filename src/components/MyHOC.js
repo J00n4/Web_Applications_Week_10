@@ -4,7 +4,7 @@ const wrappedWithName = (OriginalComponent) => {
 
         return(
             <div class="wrapper">
-                <OriginalComponent name={...props} />
+                <OriginalComponent name={props} />
             </div>
         )
     }
