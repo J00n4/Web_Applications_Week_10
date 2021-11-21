@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 function About() {
     const [dataType, setDataType] = useState("post")
-    const [data, setData] = useState("")
+    const [data, setData] = useState([""])
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -25,7 +25,11 @@ function About() {
         }
 
         const uploadData = (modifiedData) => {
-            setData(JSON.stringify(modifiedData));
+            var i;
+            for(i=0; i<modifiedData.length; i++) {
+                console.log(modifiedData[i])
+                setData(JSON.stringify(modifiedData));
+            }
         }
 
 
@@ -53,8 +57,6 @@ function About() {
 
     return(
         <div>
-            About text
-            <h3>{dataType}</h3>
             <p>{data}</p>
         </div>
     )
