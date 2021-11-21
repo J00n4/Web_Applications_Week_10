@@ -5,13 +5,10 @@ import Header from "./components/Header";
 import Menu from "./components/Menu";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import React, {Suspense} from 'react';
 
 function App() {
   const { t, i18n } = useTranslation();
-
-  const changeLanguage = (lang) => {
-      i18n.changeLanguage(lang);
-  }
 
   return (
     <Router>
@@ -25,4 +22,12 @@ function App() {
   );
 }
 
-export default App;
+//export default App;
+
+export default function Fall() {
+  return(
+      <Suspense fallback="loading">
+          <Header />
+      </Suspense>
+  )
+}
