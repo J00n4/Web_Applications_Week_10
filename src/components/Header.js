@@ -8,6 +8,7 @@ import Menu from "./Menu";
 import {Link} from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import React, {Suspense} from 'react';
+import wrappedWithName from './MyHOC';
 
 function Header() {
     const { t, i18n } = useTranslation();
@@ -15,6 +16,12 @@ function Header() {
     const changeLanguage = (lang) => {
         i18n.changeLanguage(lang);
     }
+
+    const Component = ({ name }) => {
+        return <div> Hello {name}!</div>;
+    };
+
+    const wrappedWithName = MyHOC(Component, { name: "Kalle" });
 
     return(
         <div>
