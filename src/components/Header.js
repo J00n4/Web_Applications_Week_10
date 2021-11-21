@@ -26,8 +26,8 @@ function Header() {
                     <IconButton edge="start" color="inherit" aria-label="about" sx={{ mr: 2 }}>
                         <Link to="/about">{t("About")}</Link> 
                     </IconButton>
-                    <IconButton sx={{marginLeft: "auto"}} onClick={() => changeLanguage("fi")}>FI</IconButton>
-                    <IconButton onClick={() => changeLanguage("en")}>EN</IconButton>
+                    <IconButton id="fi" sx={{marginLeft: "auto"}} onClick={() => changeLanguage("fi")}>FI</IconButton>
+                    <IconButton id="en" onClick={() => changeLanguage("en")}>EN</IconButton>
                 </Toolbar>
             </Appbar>
             <p>{t("This is the front page")}</p>
