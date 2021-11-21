@@ -30,6 +30,7 @@ function Header() {
                     <IconButton onClick={() => changeLanguage("en")}>EN</IconButton>
                 </Toolbar>
             </Appbar>
+            <p>{t("This is the front page")}</p>
         </div>
     )
 }
