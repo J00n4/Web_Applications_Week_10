@@ -3,7 +3,7 @@ const wrappedWithName = (OriginalComponent) => {
 
 
         return(
-            <div class="wrapper">
+            <div className="wrapper">
                 <OriginalComponent name={props} />
             </div>
         )
