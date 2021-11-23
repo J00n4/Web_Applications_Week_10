@@ -1,14 +1,12 @@
-const wrappedWithName = (OriginalComponent) => {
-    const NewComponent = (props) => {
-
+const MyHOC = (OriginalComponent, props) => {
 
         return(
             <div className="wrapper">
-                <OriginalComponent name={props} />
+                <div>
+                    <OriginalComponent name={props.name} />
+                </div>
             </div>
         )
-    }
-    return NewComponent;
 }
 
-export default wrappedWithName;
+export default MyHOC
