@@ -1,7 +1,7 @@
 const MyHOC = (OriginalComponent, props) => {
 
         return(
-            <div className="wrapper">
+            <div class="wrapper">
                 <div>
                     <OriginalComponent name={props.name} />
                 </div>
