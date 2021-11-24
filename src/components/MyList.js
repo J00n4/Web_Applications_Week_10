@@ -3,6 +3,8 @@ function MyList(info) {
     console.log(info.items);
     console.log(info);
     const information = info.items;
+    console.log("This here");
+    console.log(information);
     return(
         <div>
             <h1>{info.header}</h1>

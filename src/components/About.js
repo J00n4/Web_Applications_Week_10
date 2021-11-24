@@ -1,15 +1,46 @@
+import { ListItem } from '@mui/material';
 import {useState, useEffect} from 'react';
 
 function About() {
     const [dataType, setDataType] = useState("post")
     const [data, setData] = useState("")
 
+    const information = [];
+
+    console.log(information);
+
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/posts')
         .then(response => response.json())
-        .then(json => setParsedData(json))
+        .then(json => setData(json))/*(
+            information.push(json)
+        ))*/
+            
+    /*console.log("test log");
+    var i;
+    for(i=0; i<data.length; i++) {
+        information.push(data[i]);
+        console.log("This is inside the loop");
+        console.log(information);
+        console.log(data);
+    }
 
-        const setParsedData = (parseData) => {
+    console.log("This is information2 ->");
+    console.log(information);*/
+            /*{
+
+            var i;
+            for(i=0; i<json.length; i++) {
+                information.push(json[i]);
+            }
+
+        })*/
+
+        //console.log("This is information ->");
+        //console.log(information);
+
+
+        /*const setParsedData = (parseData) => {
             console.log("This is here");
             console.log(parseData);
             //const test = parseData[1].title;
@@ -17,20 +48,23 @@ function About() {
             var i;
             var dataArray = [];
             for(i=0; i<parseData.length; i++) {
+                console.log(parseData[i].title);
                 const modifiedData = { key: parseData[i].id, title: parseData[i].title };
-                console.log(modifiedData);
-                dataArray.push(modifiedData.title);
+                //console.log(modifiedData);
+                //setData([...data, modifiedData]);
+                //dataArray.push(modifiedData);
             }
-            uploadData(dataArray);
-        }
+            //uploadData(dataArray);
+        }*/
 
-        const uploadData = (modifiedData) => {
+        /*const uploadData = (modifiedData) => {
             var i;
             for(i=0; i<modifiedData.length; i++) {
                 console.log(modifiedData[i])
-                setData(JSON.stringify(modifiedData));
+                const inputData = modifiedData[i];
+                setData([...data, inputData]);
             }
-        }
+        }*/
 
 
         /*let mounted = true;
@@ -52,12 +86,27 @@ function About() {
 
         return() => {
             mounted = false;
-        };*/
+        };
+        
+        
+        {modifiedData.map((data) => (
+                     <li key={data.key}>{data.title}</li>
+                ))}
+        
+            {information.map((listItem) => (
+                    <li key={listItem.id}>{listItem.title}</li>
+                ))}
+
+        */
     }, []);
 
     return(
         <div>
-            <p>{data}</p>
+            <ul>
+                {data.map((listItem) => (
+                    <li key={listItem.id}>{listItem.title}</li>
+                ))}
+            </ul>
         </div>
     )
 }
