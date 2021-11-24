@@ -6,6 +6,10 @@ function About() {
     const [data, setData] = useState("")
 
     const information = [];
+    var i;
+    for(i=0; i<data.length; i++) {
+        information.push(data[i]);
+    }
 
     console.log(information);
 
@@ -103,7 +107,7 @@ function About() {
     return(
         <div>
             <ul>
-                {data.map((listItem) => (
+                {information.map((listItem) => (
                     <li key={listItem.id}>{listItem.title}</li>
                 ))}
             </ul>
